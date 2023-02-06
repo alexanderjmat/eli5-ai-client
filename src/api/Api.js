@@ -69,9 +69,7 @@ class MainAPI {
     const request = await axios.post(`${BASE_URL}/admin/newsletter`, {
       withCredentials: true,
       body: {
-        "headers": {
-          "Cookie": `${cookie.load("admin_token")}`
-        },
+        "Authorization": `${cookie.load("admin_token")}`
       },
     });
     console.log(request);
