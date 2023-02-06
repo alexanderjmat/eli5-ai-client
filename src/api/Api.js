@@ -8,6 +8,9 @@ class MainAPI {
   static async getAdmin() {
     const request = await axios.get(`${BASE_URL}/admin`, {
       withCredentials: true,
+      headers: {
+        "Authorization": cookie.load("admin_token")
+      }
     });
     console.log(request);
     return request;
