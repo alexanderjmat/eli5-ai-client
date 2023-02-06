@@ -1,0 +1,23 @@
+a {
+  text-decoration: none;
+  color: black;
+  width: fit-content;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+h1 {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+h2 {
+  font-family: 'EB Garamond', serif;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+}
