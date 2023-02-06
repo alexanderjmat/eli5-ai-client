@@ -31,6 +31,9 @@ class MainAPI {
   static async adminLogout() {
     const request = await axios.get(`${BASE_URL}/admin/logout`, {
       withCredentials: true,
+      headers: {
+        "Authorization": cookie.load("admin_token")
+      }
     });
     if (request.status == 200) {
       cookie.remove("admin_token");
@@ -51,7 +54,9 @@ class MainAPI {
   static async getNewsletter(id) {
     const request = await axios.get(`${BASE_URL}/admin/newsletter/${id}`, {
       withCredentials: true,
-      
+      headers: {
+        "Authorization": cookie.load("admin_token")
+      }
     });
     console.log(request);
     return request.data.newsletter;
@@ -81,6 +86,9 @@ class MainAPI {
   static async deleteNewsletter(id) {
     const request = await axios.delete(`${BASE_URL}/admin/newsletter/${id}`, {
       withCredentials: true,
+      headers: {
+        "Authorization": cookie.load("admin_token")
+      }
     })
     console.log(request)
     return request.data;
