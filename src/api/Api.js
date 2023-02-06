@@ -42,7 +42,7 @@ class MainAPI {
     const request = await axios.get(`${BASE_URL}/admin/newsletters`, {
       withCredentials: true,
       headers: {
-        Cookie: cookie.load("admin_token")
+        "Authorization": cookie.load("admin_token")
       }
     });
     return request.data.newsletters;
@@ -61,7 +61,7 @@ class MainAPI {
     const request = await axios.post(`${BASE_URL}/admin/newsletter`, {
       withCredentials: true,
       headers: {
-        Cookie: `${cookie.load("admin_token")}`,
+        "Authorization": `${cookie.load("admin_token")}`,
       },
     });
     console.log(request);
@@ -72,7 +72,7 @@ class MainAPI {
     const request = await axios.patch(`${BASE_URL}/admin/newsletter/${id}`, {
       withCredentials: true,
       headers: {
-        Cookie: `${cookie.load("admin_token")}`,
+        "Authorization": `${cookie.load("admin_token")}`,
       },
     });
     return request.data.publishNewsLetter;
@@ -90,7 +90,7 @@ class MainAPI {
     const request = await axios.get(`${BASE_URL}/admin/subscribers`, {
       withCredentials: true,
       headers: {
-        Cookie: cookie.load("admin_token")
+        "Authorization": cookie.load("admin_token")
       }
     })
     return request.data
