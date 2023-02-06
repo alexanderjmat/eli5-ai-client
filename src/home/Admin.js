@@ -131,9 +131,6 @@ function Admin(props) {
         setNewsletters(getNewsletters);
         console.log(getNewsletters)
       });
-      MainAPI.getSubscribers().then(subscribers => {
-        console.log(subscribers)
-      })
     } else {
       setPage(templates.login);
     }

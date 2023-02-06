@@ -42,7 +42,7 @@ class MainAPI {
     const request = await axios.get(`${BASE_URL}/admin/newsletters`, {
       withCredentials: true,
       headers: {
-        Cookie: cookie.load(admin_token)
+        Cookie: cookie.load("admin_token")
       }
     });
     return request.data.newsletters;
@@ -90,7 +90,7 @@ class MainAPI {
     const request = await axios.get(`${BASE_URL}/admin/subscribers`, {
       withCredentials: true,
       headers: {
-        Cookie: cookie.load(admin_token)
+        Cookie: cookie.load("admin_token")
       }
     })
     return request.data
