@@ -68,8 +68,10 @@ class MainAPI {
   static async createNewsletter() {
     const request = await axios.post(`${BASE_URL}/admin/newsletter`, {
       withCredentials: true,
-      headers: {
-        "Authorization": `${cookie.load("admin_token")}`,
+      body: {
+        "headers": {
+          "Cookie": `${cookie.load("admin_token")}`
+        },
       },
     });
     console.log(request);
