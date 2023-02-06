@@ -77,9 +77,7 @@ class MainAPI {
   static async publishNewsletter(id) {
     const request = await axios.patch(`${BASE_URL}/admin/newsletter/${id}`, {
       withCredentials: true,
-      headers: {
-        "Authorization": `${cookie.load("admin_token")}`,
-      },
+      "Authorization": `${cookie.load("admin_token")}`,
     });
     return request.data.publishNewsLetter;
   }
