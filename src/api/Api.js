@@ -115,10 +115,9 @@ class MainAPI {
 
   static async subscribe(email) {
     const request = await axios.post(`${BASE_URL}/subscribe`, {
-      body: {
-        email: email
-      }
+      email: email
     })
+    console.log(request)
     return request.data
   }
 
