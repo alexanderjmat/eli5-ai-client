@@ -41,6 +41,9 @@ class MainAPI {
   static async getNewsletters() {
     const request = await axios.get(`${BASE_URL}/admin/newsletters`, {
       withCredentials: true,
+      headers: {
+        Cookie: cookie.load(admin_token)
+      }
     });
     return request.data.newsletters;
   }
@@ -48,6 +51,7 @@ class MainAPI {
   static async getNewsletter(id) {
     const request = await axios.get(`${BASE_URL}/admin/newsletter/${id}`, {
       withCredentials: true,
+      
     });
     console.log(request);
     return request.data.newsletter;
@@ -85,6 +89,9 @@ class MainAPI {
   static async getSubscribers() {
     const request = await axios.get(`${BASE_URL}/admin/subscribers`, {
       withCredentials: true,
+      headers: {
+        Cookie: cookie.load(admin_token)
+      }
     })
     return request.data
   }
