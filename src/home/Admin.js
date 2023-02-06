@@ -124,9 +124,11 @@ function Admin(props) {
   useEffect(() => {
     if (cookie.load("admin_token")) {
       console.log(cookie.load("admin_token"));
+      MainAPI.getAdmin().then(() => {
+        setIsDataLoaded(true)
+      })
       MainAPI.getNewsletters().then((getNewsletters) => {
         setNewsletters(getNewsletters);
-        setIsDataLoaded(true);
         console.log(getNewsletters)
       });
       MainAPI.getSubscribers().then(subscribers => {
@@ -135,6 +137,7 @@ function Admin(props) {
     } else {
       setPage(templates.login);
     }
+    console.log(isDataLoaded)
   }, []);
 
   return (
