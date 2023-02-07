@@ -134,7 +134,6 @@ function Admin(props) {
     } else {
       setPage(templates.login);
     }
-    console.log(isDataLoaded)
   }, []);
 
   return (
