@@ -19,6 +19,6 @@ describe('Disclaimer', () => {
     const { getByText } = render(<Disclaimer />);
     const link = getByText(/reach out over email/i);
     expect(link).toBeInTheDocument();
-    expect(link).toHaveAttribute('href', 'mailto: eli5.ai.news@gmail.com');
+    expect(link).toHaveAttribute('href', 'mailto:eli5.ai.news@gmail.com');
   });
 });
