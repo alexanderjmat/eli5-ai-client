@@ -1,6 +1,7 @@
 import "./About.css";
 import eli5ai from "../eli5-ai.svg"
 import donate from "../donate.svg"
+import headshot from "../headshot.jpeg"
 import { useState, useEffect } from "react";
 import { Row, Col, Card, Button } from "react-bootstrap";
 import Navigation from "../navigation/Navigation";
@@ -27,7 +28,7 @@ function About() {
         </Col>
         <Col className="About__col">
           <Card className="About__card">
-            <Card.Img className="About__card-img" variant="top" src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.6435-9/83167373_2769141126503506_8350662612479901696_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=rPvlggEjPRYAX9igWYo&_nc_ht=scontent-lga3-1.xx&oh=00_AfDc3A4IeepoYZajrFdv8KHT9SVYbjMCYITSKY3NPJvrIw&oe=63FF72D2" />
+            <Card.Img className="About__card-img" variant="top" src={headshot} />
             <Card.Body className="About__card-body">
               <Card.Title><h2>AJ Matula 👋</h2></Card.Title>
               <Card.Text>
