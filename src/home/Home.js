@@ -38,7 +38,7 @@ function Home() {
             </Col>
             <Col>
               <p className="mb-5">
-                {home.currentNewsletter ? home.currentNewsletter.overviews[0].overview : "Loading..."}
+                {home.currentNewsletter.overviews[0].overview ? home.currentNewsletter.overviews[0].overview : "Loading..."}
               </p>
               <hr className="Home__col-hr yellow my-4" />
             </Col>
